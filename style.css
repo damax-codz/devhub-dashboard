@@ -1,0 +1,223 @@
+*{
+    margin: 0%;
+}
+.login-container{
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.185);
+    border-radius: 4px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 0px 0px ;
+}
+.title img{
+    width: 30px;
+    height: 30px;
+}
+.title h2{
+    font-family: 'Fredoka', sans-serif;
+    margin-left: 5px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+input{
+    width: 300px;
+    height: 30px;
+    margin: 10px 0px 0px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.form button{
+    width: 310px;
+    height: 35px;
+    margin: 30px 0px 0px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(210,77,87);
+    background-color: rgb(210,77,87);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form button:hover{
+    background-color: rgb(199, 40, 53);
+}
+.circle{
+    background-color: none;
+    border: 2px solid white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-top: none;
+    border-left: none;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;     
+}
+@-webkit-keyframes spin
+{
+    0%
+    {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100%
+    {
+        -webkit-transform: rotate(359deg);
+                transform: rotate(359deg);
+    }
+}
+@keyframes spin
+{
+    0%
+    {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+    }
+    100%
+    {
+        -webkit-transform: rotate(359deg);
+                transform: rotate(359deg);
+    }
+}
+.warning{
+    display: flex;
+    justify-content: center;
+    color: red;
+    margin-top: 20px;
+}
+.mainpage{
+    width: 100%;
+    display: flex;
+   
+}
+.dashboard{
+    height: 100vh;
+    padding: 0px 30px 0px 0px ;
+    position: sticky;
+    top: 0;
+}
+.dev img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.dev h3{
+    font-family: 'Signika', sans-serif;
+}
+.dev{
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 0px 20px;
+}
+.links li{
+    list-style-type: none;
+    margin-top: 25px;
+    font-size: 12px;
+    font-family: 'Fredoka', sans-serif;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.links li:hover{
+    color: rgb(56, 103, 214);
+}
+.links{
+    margin: 20px 0px 0px -15px;
+    display: flex;
+}
+.links img{
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px 0px 0px;
+}
+.links a{
+    color: black;
+}
+.messagepage{
+    background-color: rgba(56, 103, 214, 0.322);
+    width: 100%;
+    padding: 20px 20px 0px 50px;
+    display: flex;
+    flex-direction: column;
+}
+.newmessage{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1024px;
+}
+.messagepage p:nth-child(1){
+    margin-bottom: 30px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bolder;
+}
+.messagepage p:nth-child(2){
+    font-size: 15px;
+}
+.messagecontainer{
+    /* width: 200px; */
+    height: 150px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.096);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 10px 0px 0px;
+}
+.messagecontainer p:nth-child(1){
+    margin: 10px 0px 10px 0px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+}
+.taskp{
+    margin: 40px 0px 10px 0px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+}
+.task{
+    max-width: 1014px;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.096);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.task p:nth-child(1){
+    font-size: 80px;
+    font-weight: 10;
+    font-family: 'Fredoka', sans-serif;
+    align-items: center;
+    display: flex;
+}
+.task img:nth-child(1){
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+}
+
+@media (max-width:1025px) {
+    .newmessage{grid-template-columns: repeat(2, 1fr);}
+    .task p:nth-child(1){font-size: 40px;}
+}
