@@ -7,18 +7,15 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/3e330e8926.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
-  <body>
+  <body  onresize="changeOrientation()">
     <div class="login-container">
       <div class="title">
         <img src="./images/playstation-circle-icon.png" class="logo" />
         <h2>Devhub</h2>
       </div>
-      <div class="form" onkeypress="enter(event)">
+
+      <form class="form"  onsubmit="(event)=>{event.preventDefault()}">
         <input
           type="email"
           placeholder="Email or Username"
@@ -29,13 +26,13 @@
           type="password"
           id="pass"
           placeholder="password"
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+        
         />
         <button onclick="loadDashboard() ">Log in</button>
         <div class="warning"></div>
       </div>
-    </div>
+  
+    </form>
     
   </body>
 </html>
