@@ -35,29 +35,29 @@ loadDashboard = () => {
 };
 
 // this function loads the page after clicking ENTER but checks if the info is correct
-// enter = (event) => {
-//   let emailval = document.getElementById("email");
-//   let passval = document.getElementById("pass");
-//   let keyPressed = event.charCode;
-//   if (
-//     keyPressed === 13 &&
-//     emailval.value === "damilolabhadmus41@gmail.com" &&
-//     passval.value === "bhadmus"
-//   ) {
-//     setTimeout(openDashboard, 2000);
-//     document.getElementsByTagName(
-//       "button"
-//     )[0].innerHTML = `<div class='circle'></div>`;
-//   } else if (
-//     keyPressed === 13 &&
-//     emailval.value !== "damilolabhadmus41@gmail.com" &&
-//     passval.value !== "bhadmus"
-//   ) {
-//     document.querySelector(
-//       ".warning"
-//     ).innerHTML = `<p>please input a valid email/password!!!</p>`;
-//   }
-// };
+enter = (event) => {
+  let emailval = document.getElementById("email");
+  let passval = document.getElementById("pass");
+  let keyPressed = event.charCode;
+  if (
+    keyPressed === 13 &&
+    emailval.value === "damilolabhadmus41@gmail.com" &&
+    passval.value === "bhadmus"
+  ) {
+    setTimeout(openDashboard, 2000);
+    document.getElementsByTagName(
+      "button"
+    )[0].innerHTML = `<div class='circle'></div>`;
+  } else if (
+    keyPressed === 13 &&
+    emailval.value !== "damilolabhadmus41@gmail.com" &&
+    passval.value !== "bhadmus"
+  ) {
+    document.querySelector(
+      ".warning"
+    ).innerHTML = `<p>please input a valid email/password!!!</p>`;
+  }
+};
 
 //this function is the main function that loads the HTML part of the page
 openDashboard = () => {
