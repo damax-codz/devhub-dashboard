@@ -278,6 +278,24 @@ font-family: 'Fredoka', sans-serif;
     cursor: pointer;
     transition: 0.5s;
 }
+.reload{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: center;
+}
+.reload button {
+    background-color: rgb(210,77,87);
+    border: none;
+    width: 200px;
+    height: 45px;
+    border-radius: 20px;
+    margin: 45px 0px 0px 0px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
 .text button>a{
     text-decoration: none;
     color: white;
@@ -285,6 +303,9 @@ font-family: 'Fredoka', sans-serif;
     height: 45px;
 }
 .text button:hover{
+    background-color: rgb(179, 58, 68);
+}
+.reload button:hover{
     background-color: rgb(179, 58, 68);
 
 }
@@ -302,6 +323,7 @@ font-family: 'Fredoka', sans-serif;
 @media (max-width:800px) {
     .dashboard{padding:0px 0px 0px 0px ;width: 15%;}
     .text{width: 100%;}
+    .reload{width: 100%;}
     .animation{width: 100%;}
     .welcome{flex-direction: column;height: 450px;}
 }

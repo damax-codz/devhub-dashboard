@@ -1,10 +1,12 @@
 
 
-let dumejis = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg"]
+let dumejis = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg",
+"img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg"]
 
 let ezraAPI = [];
 
-
+// this is an immedietly invoked function expression that gets data from the API and sends it to an empty array 
+(gettingApi=()=>{
 fetch('https://devhub-backend01.herokuapp.com')
  .then((data)=>{
 return data.json()
@@ -12,9 +14,12 @@ return data.json()
  .then((result)=>{
    ezraAPI.push(result[0])
    console.log(ezraAPI[0]);
- })
 
+   console.log('data fetched')
+ })})()
 // this function loads the main dashboard after logging in
+
+
 loadDashboard = () => {
   let emailval = document.getElementById("email");
   let passval = document.getElementById("pass");
@@ -50,6 +55,7 @@ enter = (event) => {
     )[0].innerHTML = `<div class='circle'></div>`;
   } else if (
     keyPressed === 13 &&
+
     emailval.value !== "damilolabhadmus41@gmail.com" &&
     passval.value !== "bhadmus"
   ) {
@@ -101,7 +107,7 @@ openDashboard = () => {
        <div class="newmessage">
               
        </div>
-       
+       <div class='reload'> <button onClick='return gettingApi()'>Reload Messages</button> </div>
        <p class='taskp'>Task Log</p>
        <div class="task">
        <p>There are no tasks <img src="./images/happiness.png"></p>
@@ -118,8 +124,7 @@ openDashboard = () => {
       ".newmessage"
     ).innerHTML += `<div class='messagecontainer'>
 
-<img src=${dumejis[i] }>
-
+<img src=${dumejis[i]}>
 <div class='datas'>
 <p>${ezraAPI[0][i].name}</p>
 <p>${ezraAPI[0][i].email}</p>
@@ -133,9 +138,9 @@ document.querySelector('video').playbackRate=0.9;
 
 //this logout function changes the page to log out page
 logOut = () => {
-  let answer = confirm("are you fucking sure you want to log out 😏😏😏");
+  let answer = confirm("are you sure you want to log out ");
   if (answer == true) {
-    alert("get the fuck out 🖕🖕🖕🖕");
+    alert("you've successfully logged out");
     document.body.innerHTML = ` <div class="login-container">
     <div class="title">
     <img src="./images/playstation-circle-icon.png" class="logo">
