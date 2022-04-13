@@ -91,7 +91,7 @@ openDashboard = () => {
        <div class='text'>
        <h2>Welcome</h2>
        <p>
-       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus eius accusantium corporis, porro natus rerum.
+      Welcome to your Dashboard, you can now view messages sent by clients, click the button below to  view new messages.
        </p>
        <button><a href='#down'>Read Messages</a></button>
        </div>
